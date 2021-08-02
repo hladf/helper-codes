@@ -1,0 +1,147 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Console Count": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "countlog",
+    "body": [
+      "console.count('${1|0️⃣,1️⃣,2️⃣,3️⃣,❗️,🔴,🟡,🟢,🔵,❎,✅,✔️,☑️,☢️|}');",
+      "$0"
+    ],
+    "description": "count Log output to console"
+  },
+  "Print to console": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "logg",
+    "body": [
+      "console.log('\\n\\n ${1|👉,🐛,🔴,❎,☠️,✅,✔️,☑️|}', {$2}, '\\n');",
+      "$0"
+    ],
+    "description": "Log output to console"
+  },
+  "eslint disable next line": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "disableNextLine",
+    "body": ["// eslint-disable-next-line"],
+    "description": "eslint disable next line"
+  },
+  "eslint disable next line react-hooks/exhaustive-deps": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "disableNextLine_Exhaustive-deps",
+    "body": ["// eslint-disable-next-line react-hooks/exhaustive-deps"],
+    "description": "// eslint disable next line react-hooks/exhaustive-deps"
+  },
+  "eslint disable next line @TS UNUSED VAR": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "disableNextLine_Unused-Var",
+    "body": ["// eslint-disable-next-line @typescript-eslint/no-unused-vars"],
+    "description": "// eslint disable next line @typescript-eslint/no-unused-vars"
+  },
+  "Arrow Function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "arrow",
+    "body": ["(${param}: ${type:string}) => {$2};", "$0"],
+    "description": "Loga a var no console como OBJECT e quebras de linhas pra facilitar a visualização"
+  },
+  "Short Arrow Function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "arrowShort",
+    "body": ["(${1}) => {$2}$0"],
+    "description": "Loga a var no console como OBJECT e quebras de linhas pra facilitar a visualização"
+  },
+  "Use Styled-components Theme": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,css",
+    "prefix": "theme-styled",
+    "body": ["${({ theme }) => theme$1}$0"],
+    "description": "Cria o bloco `${({ theme }) => theme}` para usar variaveis do tema"
+  },
+  "style inline": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "sty",
+    "body": ["style={{ ${1} }}${2}"],
+    "description": "snippet de 'style={{ foo: bar }}'"
+  },
+  "className": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "clas",
+    "body": ["className=\"${1}\" ${2}"],
+    "description": "snippet de 'className=\"\"'"
+  },
+  "useSelector": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useSelector",
+    "body": ["const $1 = useSelector($2);"],
+    "description": "snippet de redux 'const $1 = useSelector($2);'"
+  },
+  "useDispatch": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useDispatch",
+    "body": ["const dispatch = useDispatch();", "$0"],
+    "description": "snippet de hook de dispatch 'const dispatch = useDispatch();'"
+  },
+  "useMemo": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useMemo",
+    "body": ["useMemo(() => {$1}, [$2]);"],
+    "description": "snippet de hook useMemo"
+  },
+  "useEffect": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "useEffect",
+    "body": ["useEffect(() => {$1}, [$2]);", "$0"],
+    "description": "snippet de hook useEffect"
+  },
+  "React Functional Comp. const exported": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "rfcex",
+    "body": [
+      "import React from 'react';",
+      "",
+      "// import { Container } from './$3.styles';",
+      "",
+      "export const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC = () => {",
+      "  return (<div>$4</div>);",
+      "}",
+      ""
+    ],
+    "description": "Create ReactJS Functional Component Typescript"
+  },
+  "CSS media Query": {
+    "scope": "css",
+    "prefix": "mediaQuery",
+    "body": ["@media only screen and (min-width: ${$1}rem) {", "  $2", "}$0"],
+    "description": "snippet de redux 'const $1 = useSelector($2);'"
+  },
+  "Export all from ...": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "exall",
+    "body": ["export * from '$1';", "$0"],
+    "description": "count Log output to console"
+  },
+  "Export Type TS": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "exty",
+    "body": ["export type $1 = {", "  $2", "}$0"],
+    "description": "`export type` block"
+  },
+  "Export Interface TS": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "exin",
+    "body": ["export interface $1 {", "  $2", "}$0"],
+    "description": "`export interface` block"
+  }
+}

@@ -1,0 +1,24 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Hugo Ladeira de Freitas
+	email = hugo_ladeira@hotmail.com
+[core]
+	editor = code --wait
+[push]
+# para enviar tags anotadas (tag -a) no push
+	followTags = true
+[alias]
+  c = !git add --all && git commit -m
+  s = !git status -s
+  l = !git log --pretty=format:'%C(blue)%h%C(red)%d - %C(cyan)%cn, %C(green)%cr \n- %C(white)%s'
+  # emenda o commit atual no commit anterior sem gerar um novo
+  amend = !echo git commit --amend --no-edit && git commit --amend --no-edit
+  count = !echo git shortlog -s --grep && git shortlog -s --grep
+  mergedev = !echo git merge --no-ff origin/develop && git merge --no-ff origin/develop
+  pushnv = !echo git push --no-verify && git push --no-verify
+  resetlast = !echo git reset --soft HEAD~1 && git reset --soft HEAD~1
+  configemail = !echo git config user.email hugo.ladeira@devires.com.br && git config user.email hugo.ladeira@devires.com.br

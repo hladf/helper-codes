@@ -21,4 +21,4 @@
   mergedev = !echo git merge --no-ff origin/develop && git merge --no-ff origin/develop
   pushnv = !echo git push --no-verify && git push --no-verify
   resetlast = !echo git reset --soft HEAD~1 && git reset --soft HEAD~1
-  configemail = !echo git config user.email hugo.ladeira@devires.com.br && git config user.email hugo.ladeira@devires.com.br
+  configemail = !echo git config user.email hugo_ladeira@hotmail.com && git config user.email hugo_ladeira@hotmail.com

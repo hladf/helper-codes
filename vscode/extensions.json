@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "eamodio.gitlens",
+    "jpoissonnier.vscode-styled-components"
+  ]
+}

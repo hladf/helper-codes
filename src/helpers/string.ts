@@ -93,7 +93,8 @@ export function hasMoreLettersThanNumbers(text?: string): boolean {
 
 export function hasLettersAndNumbers(str: string): boolean {
   return (
-    !!str.match(/^(?:[0-9]+[a-z\s]|[a-z\s]+[0-9])[a-z0-9\s]*$/i)?.length || false
+    !!str.match(/^(?:[0-9]+[a-z\s]|[a-z\s]+[0-9])[a-z0-9\s]*$/i)?.length ||
+    false
   );
 }
 
@@ -153,7 +154,9 @@ export function putLeftZeros(valueToPut: string, zerosLength = 12) {
   );
 }
 
-export const nameListToLocaleString = (selectedBeneficiaries?: string[]): string => {
+export const nameListToLocaleString = (
+  selectedBeneficiaries?: string[]
+): string => {
   if (!selectedBeneficiaries || !selectedBeneficiaries.length) {
     return '';
   }
@@ -166,4 +169,13 @@ export const nameListToLocaleString = (selectedBeneficiaries?: string[]): string
     }
     return last ? `${combinedStr} e ${curr}` : `${combinedStr}, ${curr}`;
   }, '');
+};
+
+export const capitalizeFirst = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+export const verifyCep = (cep: string) => {
+  const regex = /^[0-9]{5}-[0-9]{3}$/;
+  return regex.test(cep);
 };

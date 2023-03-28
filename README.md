@@ -14,7 +14,8 @@ Contém utilidades de:
   - download de arquivo pelo client
   - etc...
 - React
-  - hooks úteis
+  - hooks úteis e genéricos
+  - componentes
 - Git
   - Comandos e logs personalizados
 - VS Code
